@@ -64,7 +64,7 @@ export function Experiencia() {
                 </div>
                 {/* Certification Cards */}
                 <div className="lg:col-span-5">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-sm">
                         <Card
                             bgClass="bg-[var(--color-sage-600)] h-full"
                             textClass="text-[var(--color-black)]"

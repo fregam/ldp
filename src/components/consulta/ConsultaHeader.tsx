@@ -14,7 +14,7 @@ export default function ConsultaHeader(): JSX.Element {
 
       <Section decorate className='py-20 sm:py-24 lg:py-32'>
         {/* Header Container */}
-        <Container className="relative mx-auto border-b">
+        <Container className="relative mx-auto ">
           <div className="col-span-full">
             <div className="text-center">
               <h1 className="text-5xl font-semibold tracking-tight text-[var(--color-foreground)] sm:text-7xl">
@@ -31,10 +31,12 @@ export default function ConsultaHeader(): JSX.Element {
             <img
               src="/images/_M1A8946.jpg"
               alt="Bienestar personal"
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-center rounded-sm"
             />
           </div>
         </Container>
+      </Section>
+      <Section className='pb-20 sm:pb-24 lg:pb-32'>
         {/* Content Container */}
         <Container animate
           className="relative mx-auto"
@@ -54,7 +56,7 @@ export default function ConsultaHeader(): JSX.Element {
                 <img
                   src="/images/_M1A8946.jpg"
                   alt="Bienestar personal"
-                  className="h-full w-full object-cover object-center"
+                  className="h-full w-full object-cover object-center rounded-sm"
 
                 />
               </div>

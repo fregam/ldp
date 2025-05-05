@@ -34,7 +34,7 @@ export function Proyectos() {
                 {/* Right Text Column */}
                 <div className="lg:col-span-2 ">
                     {/* Large card at the top */}
-                    <div className="w-full pb-2">
+                    <div className="w-full pb-sm">
                         <Card
                             bgClass="bg-[var(--color-muted)]"
                             textClass="text-[var(--color-black)]"
@@ -52,7 +52,7 @@ export function Proyectos() {
                     </div>
 
                     {/* Two cards at the bottom */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-sm">
                         {/* YouTube Stats Card */}
                         <div >
                             <Card

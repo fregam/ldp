@@ -53,7 +53,7 @@ export const Card: FC<CardProps> = ({
     <div
       className={clsx(
         bgClass,
-        'p-5 xl:p-8 h-full flex flex-col md:flex-row rounded-md'
+        'p-5 xl:p-8 h-full flex flex-col md:flex-row rounded-sm'
       )}
     >
       {/* Left: Icon & Text Content */}

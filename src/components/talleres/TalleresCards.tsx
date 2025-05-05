@@ -4,9 +4,7 @@ import { Check, ToyBrick, Youtube } from "lucide-react"
 import { Section } from "../ui/Section"
 import { Card } from "../ui/Card"
 import { Container } from "../ui/Container"
-import { EmblaOptionsType } from "embla-carousel"
-import EmblaCarouselVertical from "../ui/EmblaCarousel/EmblaCarouselVertical"
-import EmblaCarouselHorizontal from "../ui/EmblaCarousel/EmblaCarouselHorizontal"
+import { WorkshopCarousel } from "../ui/ImageCarousel"
 
 
 
@@ -90,12 +88,10 @@ export default function TalleresCards() {
         '/images/PHOTO-2025-04-05-10-16-38.jpg ',
         '/images/PHOTO-2025-04-05-10-16-50.jpg',
     ]
-    const OPTIONSHORIZONTAL: EmblaOptionsType = { loop: true }
-    const OPTIONSVERTICAL: EmblaOptionsType = { axis: 'y', direction: 'rtl', loop: true }
 
 
     return (
-        <Section>
+        <Section className='pb-20 sm:pb-24 lg:pb-32'>
             <Container animate
                 className="relative mx-auto "
                 motionProps={{
@@ -107,24 +103,10 @@ export default function TalleresCards() {
             >
                 <div className="col-span-full grid lg:grid-cols-2">
                     {/* Image Content Desktop */}
-                    <div className="hidden lg:block lg:col-span-1">
-                        <div
-                            className="w-full h-full overflow-hidden"
-                        >
-                            {/* <img
-                                src="/images/_M1A8946.jpg"
-                                alt="Bienestar personal"
-                                className="h-full w-full object-cover object-center"
-
-                            /> */}
+                    <div className="lg:col-span-1">
+                        <div className="w-full h-full overflow-hidden">
                             <div className="md:col-span-2">
-                                <EmblaCarouselHorizontal slides={workshopImages.map((url) => (
-                                    <img
-                                        className="embla__slide__img"
-                                        src={`${url}`}
-                                        alt="Your alt text"
-                                    />
-                                ))} options={OPTIONSHORIZONTAL} />
+                                <WorkshopCarousel images={workshopImages} />
                             </div>
                         </div>
                     </div>
@@ -136,31 +118,29 @@ export default function TalleresCards() {
                                 Algunos de estos espacios han sido facilitados tanto en formato presencial como virtual,
                                 adaptándose a las necesidades de cada grupo o institución.
                             </p>
-                            <br/>
+                            <br />
                             <p className=" text-lg text-[var(--color-foreground)] sm:text-xl">
                                 Los talleres y programas más solicitados son:
                             </p>
                         </div>
                         <div>
-                            <EmblaCarouselVertical slides={
-                                services.map((service, index) => (
-                                    <div>
-                                        <Card key={index}
-                                            bgClass={
-                                                index % 2 === 0
-                                                    ? "bg-[var(--color-peach-light)]"
-                                                    : "bg-[var(--color-sage-400)]"
-                                            }
-                                            textClass="text-[var(--color-black)]"
-                                            title={service.title}
-                                            description={service.description}
-                                            icon={<ToyBrick className="w-6 h-6" />}
-                                            mdColSpan={1}
-                                        />
-                                    </div>
+                        services.map((service, index) => (
+                            {/* <div>
+                                <Card key={index}
+                                    bgClass={
+                                        index % 2 === 0
+                                            ? "bg-[var(--color-peach-light)]"
+                                            : "bg-[var(--color-sage-400)]"
+                                    }
+                                    textClass="text-[var(--color-black)]"
+                                    title={service.title}
+                                    description={service.description}
+                                    icon={<ToyBrick className="w-6 h-6" />}
+                                    mdColSpan={1}
+                                />
+                            </div> */}
 
-                                ))
-                            } options={OPTIONSVERTICAL} />
+                            ))
                         </div>
                         <div>
 

@@ -19,11 +19,11 @@ export default function Hero(): JSX.Element {
         }}
       >
         {/* Mobile Image */}
-        <div className="block lg:hidden w-full h-[33vh] overflow-hidden">
+        <div className="block lg:hidden w-full h-[33vh] overflow-hidden pt-sm">
           <img
             src="/images/9A1A3071.jpg"
             alt="Bienestar personal"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center rounded-sm"
           />
         </div>
 
@@ -58,13 +58,13 @@ export default function Hero(): JSX.Element {
         {/* Desktop Image */}
         <div className="hidden lg:block lg:col-span-2 h-full">
           <div
-            className="absolute top-0 right-0 h-full overflow-hidden"
+            className="absolute top-0 right-0 h-full overflow-hidden p-lg"
             style={{ width: 'calc(40% - 1rem)' }}
           >
             <img
               src="/images/9A1A3071.jpg"
               alt="Bienestar personal"
-              className="h-full w-full object-cover object-center"
+              className="h-full w-full object-cover object-center rounded-sm"
             />
           </div>
         </div>
