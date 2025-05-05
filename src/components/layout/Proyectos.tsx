@@ -32,9 +32,9 @@ export function Proyectos() {
                     </p>
                 </div>
                 {/* Right Text Column */}
-                <div className="lg:col-span-2">
+                <div className="lg:col-span-2 ">
                     {/* Large card at the top */}
-                    <div className="w-full">
+                    <div className="w-full pb-2">
                         <Card
                             bgClass="bg-[var(--color-muted)]"
                             textClass="text-[var(--color-black)]"

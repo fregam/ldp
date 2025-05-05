@@ -2,6 +2,7 @@
 
 @import "tailwindcss";
 
+
 /* ──────── Light Theme Tokens ──────── */
 @theme {
 
@@ -22,7 +23,7 @@
   /* approx. #58595B */
   --color-cream: oklch(93.44% 0.010 87.47);
   /* approx. #ECE9E2 */
-  --color-black: oklch(0 0 0 / 70.64%);
+  --color-black: oklch(0 0 0 / 80.64%);
 
   /* Colors */
   --color-background: white;

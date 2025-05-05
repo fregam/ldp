@@ -11,7 +11,9 @@ import { Phone, Mail, MapPin } from 'lucide-react'
 export default function ConsultaHeader(): JSX.Element {
   return (
     <div className="flex flex-col items-center">
+
       <Section decorate className='py-20 sm:py-24 lg:py-32'>
+        {/* Header Container */}
         <Container className="relative mx-auto border-b">
           <div className="col-span-full">
             <div className="text-center">
@@ -33,6 +35,7 @@ export default function ConsultaHeader(): JSX.Element {
             />
           </div>
         </Container>
+        {/* Content Container */}
         <Container animate
           className="relative mx-auto"
           motionProps={{
@@ -65,12 +68,15 @@ export default function ConsultaHeader(): JSX.Element {
                   terapéutico conmigo, puedes anotarte en la lista de espera escribiéndome por WhatsApp al +506
                   8754-2050
                 </p>
-                <br/>
+                <br />
                 <p className=" text-lg text-[var(--color-foreground)] sm:text-xl">
                   ¡Estaré encantada de contactarte cuando haya disponibilidad!
                 </p>
               </div>
-              <div className='grid lg:grid-cols-3 gap-2'>
+
+            
+              {/* Large card at the top */}
+              <div className="w-full pb-2">
                 <Card
                   bgClass="bg-[var(--color-muted)]"
                   textClass="text-[var(--color-black)]"
@@ -83,7 +89,9 @@ export default function ConsultaHeader(): JSX.Element {
 
                   }}
                 />
+              </div>
 
+              <div className='grid lg:grid-cols-2 gap-2'>
                 <Card
                   bgClass="bg-[var(--color-secondary)]"
                   textClass="text-[var(--color-black)]"
