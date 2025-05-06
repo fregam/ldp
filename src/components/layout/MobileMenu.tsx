@@ -18,7 +18,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'Consulta', href: '/Consulta' },
   { label: 'Talleres', href: '/Talleres' },
   { label: 'Podcast', href: '/Podcast' },
-  { label: 'Club de Lectura', href: '/Club-de-lectura' },
+  { label: 'Club de Lectura', href: '/ClubLectura' },
 ]
 
 interface MobileMenuProps {

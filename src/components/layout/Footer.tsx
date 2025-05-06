@@ -20,7 +20,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'Consulta', href: '/consulta' },
   { label: 'Talleres', href: '/talleres' },
   { label: 'Podcast', href: '/podcast' },
-  { label: 'Club de Lectura', href: '/club-de-lectura' },
+  { label: 'Club de Lectura', href: '/ClubLectura' },
 ]
 
 
