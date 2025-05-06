@@ -92,11 +92,11 @@ export default function TalleresCards() {
         },
     ]
     const workshopImages = [
-        '/images/PHOTO-2025-04-05-10-16-13.jpg ',
-        '/images/PHOTO-2025-04-05-10-16-15.jpg ',
-        '/images/PHOTO-2025-04-05-10-16-22.jpg ',
-        '/images/PHOTO-2025-04-05-10-16-35.jpg ',
-        '/images/PHOTO-2025-04-05-10-16-38.jpg ',
+        '/images/PHOTO-2025-04-05-10-16-13.jpg',
+        '/images/PHOTO-2025-04-05-10-16-15.jpg',
+        '/images/PHOTO-2025-04-05-10-16-22.jpg',
+        '/images/PHOTO-2025-04-05-10-16-35.jpg',
+        '/images/PHOTO-2025-04-05-10-16-38.jpg',
         '/images/PHOTO-2025-04-05-10-16-50.jpg',
     ]
 
