@@ -18,6 +18,8 @@ type Topic = {
     color: string
     bgColor: string
     borderColor: string
+    colorSelected: string,
+    bgSelected: string
 }
 
 const topics: Topic[] = [
@@ -29,87 +31,107 @@ const topics: Topic[] = [
         color: "text-[var(--color-primary-foreground)]",
         bgColor: "bg-[var(--color-cream)]",
         borderColor: "border-[var(--color-sage-600)]",
+        colorSelected: "text-[var(--color-secondary-foreground)]",
+        bgSelected: "bg-[var(--color-secondary)]"
     },
     {
         id: 2,
         name: "Ansiedad",
         icon: <Zap className="h-5 w-5" />,
         description: "Comprensión de los diferentes tipos de ansiedad y herramientas para reducir su impacto.",
-        color: "text-[var(--color-sage-600)]",
+        color: "text-[var(--color-primary-foreground)]",
         bgColor: "bg-[var(--color-cream)]",
         borderColor: "border-[var(--color-sage-600)]",
+        colorSelected: "text-[var(--color-secondary-foreground)]",
+        bgSelected: "bg-[var(--color-secondary)]"
     },
     {
         id: 3,
         name: "Estilos de apego",
         icon: <Heart className="h-5 w-5" />,
         description: "Cómo nuestros patrones de vinculación afectan nuestras relaciones actuales.",
-        color: "text-[var(--color-sage-600)]",
+        color: "text-[var(--color-primary-foreground)]",
         bgColor: "bg-[var(--color-cream)]",
         borderColor: "border-[var(--color-sage-600)]",
+        colorSelected: "text-[var(--color-secondary-foreground)]",
+        bgSelected: "bg-[var(--color-secondary)]"
     },
     {
         id: 4,
         name: "Depresión",
         icon: <Frown className="h-5 w-5" />,
         description: "Señales, causas y abordajes terapéuticos para los estados depresivos.",
-        color: "text-[var(--color-sage-600)]",
+        color: "text-[var(--color-primary-foreground)]",
         bgColor: "bg-[var(--color-cream)]",
         borderColor: "border-[var(--color-sage-600)]",
+        colorSelected: "text-[var(--color-secondary-foreground)]",
+        bgSelected: "bg-[var(--color-secondary)]"
     },
     {
         id: 5,
         name: "Duelo",
         icon: <Leaf className="h-5 w-5" />,
         description: "El proceso de pérdida y las etapas para transitar el dolor hacia la aceptación.",
-        color: "text-[var(--color-sage-600)]",
+        color: "text-[var(--color-primary-foreground)]",
         bgColor: "bg-[var(--color-cream)]",
         borderColor: "border-[var(--color-sage-600)]",
+        colorSelected: "text-[var(--color-secondary-foreground)]",
+        bgSelected: "bg-[var(--color-secondary)]"
     },
     {
         id: 6,
         name: "Trastornos de personalidad",
         icon: <Users className="h-5 w-5" />,
         description: "Características, diagnóstico y tratamiento de los diferentes trastornos de personalidad.",
-        color: "text-[var(--color-sage-600)]",
+        color: "text-[var(--color-primary-foreground)]",
         bgColor: "bg-[var(--color-cream)]",
         borderColor: "border-[var(--color-sage-600)]",
+        colorSelected: "text-[var(--color-secondary-foreground)]",
+        bgSelected: "bg-[var(--color-secondary)]"
     },
     {
         id: 7,
         name: "Autoestima",
         icon: <Smile className="h-5 w-5" />,
         description: "Construir una relación saludable con uno mismo y fortalecer la valoración personal.",
-        color: "text-[var(--color-sage-600)]",
+        color: "text-[var(--color-primary-foreground)]",
         bgColor: "bg-[var(--color-cream)]",
         borderColor: "border-[var(--color-sage-600)]",
+        colorSelected: "text-[var(--color-secondary-foreground)]",
+        bgSelected: "bg-[var(--color-secondary)]"
     },
     {
         id: 8,
         name: "Mindfulness",
         icon: <Sparkles className="h-5 w-5" />,
         description: "Prácticas de atención plena para reducir el estrés y mejorar la calidad de vida.",
-        color: "text-[var(--color-sage-600)]",
+        color: "text-[var(--color-primary-foreground)]",
         bgColor: "bg-[var(--color-cream)]",
         borderColor: "border-[var(--color-sage-600)]",
+        colorSelected: "text-[var(--color-secondary-foreground)]",
+        bgSelected: "bg-[var(--color-secondary)]"
     },
     {
         id: 9,
         name: "Neurociencia",
         icon: <Brain className="h-5 w-5" />,
         description: "Cómo funciona nuestro cerebro y su relación con nuestras emociones y comportamientos.",
-        color: "text-[var(--color-sage-600)]",
+        color: "text-[var(--color-primary-foreground)]",
         bgColor: "bg-[var(--color-cream)]",
         borderColor: "border-[var(--color-sage-600)]",
+        colorSelected: "text-[var(--color-secondary-foreground)]",
+        bgSelected: "bg-[var(--color-secondary)]"
     },
     {
         id: 10,
         name: "Desarrollo personal",
         icon: <Lightbulb className="h-5 w-5" />,
         description: "Herramientas para el crecimiento personal y la realización de nuestro potencial.",
-        color: "text-[var(--color-sage-600)]",
+        color: "text-[var(--color-primary-foreground)]",
         bgColor: "bg-[var(--color-cream)]",
         borderColor: "border-[var(--color-sage-600)]",
+        colorSelected: "text-[var(--color-secondary-foreground)]",
+        bgSelected: "bg-[var(--color-secondary)]"
     },
 ]
 
@@ -118,11 +140,6 @@ export default function PodcastTopics(): JSX.Element {
 
     return (
         <Section decorate className="py-20 sm:py-24 lg:py-32">
-            {/* <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -left-40 top-1/3 h-80 w-80 rounded-full bg-[var(--color-beige-300)]/20 blur-3xl"></div>
-        <div className="absolute -right-40 bottom-1/3 h-80 w-80 rounded-full bg-[var(--color-sage-400)]/10 blur-3xl"></div>
-      </div> */}
-
             <Container
                 className="relative mx-auto"
                 motionProps={{
@@ -142,19 +159,19 @@ export default function PodcastTopics(): JSX.Element {
                         </p>
                     </div>
                     <div className="mt-12">
-                        <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+                        <div className="flex flex-wrap justify-center justify-center gap-3 md:gap-4">
                             {topics.map((topic) => (
-                                <motion.div key={topic.id} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                                <motion.div key={topic.id} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} >
                                     <Button
                                         className={cn(
-                                            "border transition-all",
+                                            "flex items-center transition-all",
                                             selectedTopic?.id === topic.id
-                                                ? `${topic.color} ${topic.bgColor} ${topic.borderColor}`
-                                                : `text-[var(--color-primary-foreground)] hover:border-[var(--color-sage-400)] hover:bg-[var(--color-cream)]/50`,
+                                                ? `${topic.colorSelected} ${topic.bgSelected}`
+                                                : `${topic.color} ${topic.bgColor}`,
                                         )}
                                         onClick={() => setSelectedTopic(topic.id === selectedTopic?.id ? null : topic)}
                                     >
-                                        <span className={selectedTopic?.id === topic.id ? topic.color : "text-[var(--color-sage-600)]"}>
+                                        <span className={selectedTopic?.id === topic.id ? topic.colorSelected : topic.color}>
                                             {topic.icon}
                                         </span>
                                         <span className="ml-2">{topic.name}</span>
@@ -174,8 +191,8 @@ export default function PodcastTopics(): JSX.Element {
                                     className="mx-auto mt-8 max-w-2xl overflow-hidden rounded-sm bg-[var(--color-background)] p-6 shadow-md"
                                 >
                                     <div className="flex items-center gap-3">
-                                        <div className={cn("flex h-10 w-10 items-center justify-center rounded-full", selectedTopic.bgColor)}>
-                                            <span className={selectedTopic.color}>{selectedTopic.icon}</span>
+                                        <div className={cn("flex h-10 w-10 items-center justify-center rounded-full", selectedTopic.bgSelected)}>
+                                            <span className={selectedTopic.colorSelected}>{selectedTopic.icon}</span>
                                         </div>
                                         <h3 className="text-xl font-semibold text-[var(--color-foreground)]">{selectedTopic.name}</h3>
                                     </div>

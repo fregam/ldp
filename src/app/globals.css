@@ -24,6 +24,7 @@
   --color-cream: oklch(93.44% 0.010 87.47);
   /* approx. #ECE9E2 */
   --color-black: oklch(0 0 0 / 80.64%);
+  --color-white: oklch(1 0 0 / 80.64%);
 
   /* Colors */
   --color-background: white;
@@ -31,7 +32,7 @@
   --color-primary: var(--color-sage-600);
   --color-primary-foreground: var(--color-cream);
   --color-secondary: var(--color-peach-dark);
-  --color-secondary-foreground: var(--color-cream);
+  --color-secondary-foreground: var(--color-white);
   --color-muted: var(--color-beige-500);
   --color-muted-foreground: var(--color-sage-600);
   --color-accent: var(--color-beige-300);
