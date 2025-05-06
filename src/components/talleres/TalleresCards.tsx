@@ -1,14 +1,25 @@
 'use client'
 
-import { Check, ToyBrick, Youtube } from "lucide-react"
 import { Section } from "../ui/Section"
-import { Card } from "../ui/Card"
 import { Container } from "../ui/Container"
 import { WorkshopCarousel } from "../ui/ImageCarousel"
+import { AnimatePresence, motion } from "framer-motion"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useState } from "react"
 
 
 
 export default function TalleresCards() {
+    const [currentIndex, setCurrentIndex] = useState(0)
+
+    const nextTaller = () => {
+        setCurrentIndex((prevIndex: number) => (prevIndex + 1) % services.length)
+    }
+
+    const prevTaller = () => {
+        setCurrentIndex((prevIndex: number) => (prevIndex - 1 + services.length) % services.length)
+    }
+
     const services = [
         {
             title: "Emocionalmente Fuerte",
@@ -101,7 +112,7 @@ export default function TalleresCards() {
                     transition: { duration: 0.6, ease: 'easeOut' },
                 }}
             >
-                <div className="col-span-full grid lg:grid-cols-2">
+                <div className="col-span-full grid lg:grid-cols-2 items-center">
                     {/* Image Content Desktop */}
                     <div className="lg:col-span-1">
                         <div className="w-full h-full overflow-hidden">
@@ -113,7 +124,7 @@ export default function TalleresCards() {
 
                     {/* Text Box */}
                     <div className="lg:px-8 lg:col-span-1">
-                        <div className='py-12 sm:py-48 lg:py-24 md-24 sm:px-0'>
+                        <div className='py-12 sm:px-0'>
                             <p className=" text-lg text-[var(--color-foreground)] sm:text-xl">
                                 Algunos de estos espacios han sido facilitados tanto en formato presencial como virtual,
                                 adaptándose a las necesidades de cada grupo o institución.
@@ -123,24 +134,50 @@ export default function TalleresCards() {
                                 Los talleres y programas más solicitados son:
                             </p>
                         </div>
-                        <div>
-                        services.map((service, index) => (
-                            {/* <div>
-                                <Card key={index}
-                                    bgClass={
-                                        index % 2 === 0
-                                            ? "bg-[var(--color-peach-light)]"
-                                            : "bg-[var(--color-sage-400)]"
-                                    }
-                                    textClass="text-[var(--color-black)]"
-                                    title={service.title}
-                                    description={service.description}
-                                    icon={<ToyBrick className="w-6 h-6" />}
-                                    mdColSpan={1}
-                                />
-                            </div> */}
+                        <div className="bg-[var(--color-background)] rounded-sm p-6 md:p-10 border border-[var(--color-border)]">
+                            <div className="min-h-[250px] md:min-h-[200px]">
+                                <AnimatePresence mode="wait">
+                                    <motion.div
+                                        key={currentIndex}
+                                        initial={{ opacity: 0, x: 20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        exit={{ opacity: 0, x: -20 }}
+                                        transition={{ duration: 0.3 }}
+                                    >
+                                        <div className="flex items-center">
+                                            <div>
+                                                <h3 className="text-xl font-semibold text-[var(--color-foreground)] mb-4">
+                                                    {services[currentIndex].title}
+                                                </h3>
+                                                <p className="font-semibold text-[var(--color-foreground)]">
 
-                            ))
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <p className="text-[var(--color-foreground)] text-lg">
+                                            {services[currentIndex].description}
+                                        </p>
+
+                                    </motion.div>
+                                </AnimatePresence>
+                            </div>
+
+                            <div className=" flex space-x-2">
+                                <button
+                                    onClick={prevTaller}
+                                    className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-cream)] text-[var(--color-sage-600)] hover:bg-[var(--color-beige-300)] transition-colors"
+                                    aria-label="Previous taller"
+                                >
+                                    <ChevronLeft className="h-5 w-5" />
+                                </button>
+                                <button
+                                    onClick={nextTaller}
+                                    className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-cream)] text-[var(--color-sage-600)] hover:bg-[var(--color-beige-300)] transition-colors"
+                                    aria-label="Next taller"
+                                >
+                                    <ChevronRight className="h-5 w-5" />
+                                </button>
+                            </div>
                         </div>
                         <div>
 

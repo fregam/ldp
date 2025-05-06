@@ -1,9 +1,8 @@
 'use client'
 
-import React, { JSX } from 'react'
+import { JSX } from 'react'
 import Link from 'next/link'
 import { Container } from '@/components/ui/Container'
-import { Button } from '@/components/ui/Button'
 import { Section } from '../ui/Section'
 
 export default function Hero(): JSX.Element {
@@ -42,14 +41,20 @@ export default function Hero(): JSX.Element {
           {/* Main Content */}
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-semibold tracking-tight text-[var(--color-foreground)] sm:text-7xl">
-              Cultiva tu Bienestar Personal
+              Cultiva tu {" "}
+              <span className="relative inline-block">
+
+                <span className="relative z-10"> Bienestar</span>
+                <span className="absolute bottom-2 left-0 z-0 h-3 w-full bg-[var(--color-peach-light)]"></span>
+              </span>{" "}
+              Personal
             </h1>
             <p className="mt-8 text-lg text-[var(--color-muted-foreground)] sm:text-xl">
               Sesiones de terapia individual, talleres y recursos diseñados para fortalecer tu mente, cultivar resiliencia y mejorar tu calidad de vida.
             </p>
             <div className="mt-10 flex items-center justify-center lg:justify-start gap-x-6">
               <Link href="#sobre-mi" className="text-lg font-semibold text-[var(--color-foreground)]">
-                Conóceme <span aria-hidden="true">→</span>
+                Conóceme <span >→</span>
               </Link>
             </div>
           </div>

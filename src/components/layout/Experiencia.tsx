@@ -1,8 +1,6 @@
 'use client'
-import React from 'react'
 import { Container } from '@/components/ui/Container'
 import { Card } from '@/components/ui/Card'
-import { Award, Users, BookOpen } from 'lucide-react'
 import { Section } from '../ui/Section'
 
 export function Experiencia() {
@@ -30,7 +28,7 @@ export function Experiencia() {
                         autoconocimiento y crecimiento personal.
                     </p>
                     <blockquote className="w-full my-16 p-4 border-l-4 … max-w-3xl">
-                        "Cada experiencia clínica y formativa ha reforzado mi vocación por el bienestar emocional."
+                    {`&quot`} Cada experiencia clínica y formativa ha reforzado mi vocación por el bienestar emocional.{`&quot`}
                     </blockquote>
                 </div>
 

@@ -1,12 +1,10 @@
 'use client'
 
-import React, { JSX } from 'react'
-import Link from 'next/link'
+import { JSX } from 'react'
 import { Container } from '@/components/ui/Container'
-import { Button } from '@/components/ui/Button'
 import { Section } from '../ui/Section'
 import { Card } from '../ui/Card'
-import { Phone, Mail, MapPin } from 'lucide-react'
+import { Phone, MapPin } from 'lucide-react'
 
 export default function ConsultaHeader(): JSX.Element {
   return (

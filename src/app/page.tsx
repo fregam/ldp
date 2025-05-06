@@ -3,8 +3,6 @@ import Hero from '@/components/layout/Hero'
 import { Proyectos } from '@/components/layout/Proyectos'
 import { SobreMi } from '@/components/layout/SobreMi'
 // import Newsletter from '@/components/layout/Newsletter'
-import Image from 'next/image'
-import Link from 'next/link'
 
 export default function Home() {
   return (

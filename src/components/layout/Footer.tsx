@@ -2,9 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import Script from 'next/script'
-import { Instagram, Twitter, Facebook, Linkedin, Youtube, Mail, MapPin, Phone } from 'lucide-react'
-import { JSX } from 'react'
+import { Instagram, Youtube, Mail, MapPin, Phone } from 'lucide-react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSpotify } from "@fortawesome/free-brands-svg-icons"
 import { usePathname } from 'next/navigation'
@@ -103,7 +101,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <Phone className="h-5 w-5 text-[var(--color-footer-foreground)] mr-2 shrink-0" />
-                <span className="text-[var(--color-footer-foreground)]">+506 8888-8888</span>
+                <span className="text-[var(--color-footer-foreground)]">+506 8873-0130</span>
               </li>
               <li className="flex items-start">
                 <Mail className="h-5 w-5 text-[var(--color-footer-foreground)] mr-2 shrink-0" />
@@ -111,7 +109,11 @@ export default function Footer() {
               </li>
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-[var(--color-footer-foreground)] mr-2 shrink-0" />
-                <span className="text-[var(--color-footer-foreground)]">Centro Empresarial La Sabana, San José, Costa Rica</span>
+                <span className="text-[var(--color-footer-foreground)]">Distrito 4, Guachipelín de Escazú. Tercer piso, consultorio 309</span>
+              </li>
+              <li className="flex items-start">
+                <MapPin className="h-5 w-5 text-[var(--color-footer-foreground)] mr-2 shrink-0" />
+                <span className="text-[var(--color-footer-foreground)]">Torre Médica de Momentum Pinares. Tercer piso, consultorio C22</span>
               </li>
             </ul>
           </div>

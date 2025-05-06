@@ -1,6 +1,6 @@
 'use client'
 
-import React, { FC, ReactNode, ReactElement, ButtonHTMLAttributes } from 'react'
+import { FC, ReactNode, ButtonHTMLAttributes } from 'react'
 import clsx from 'clsx'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -12,7 +12,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button: FC<ButtonProps> = ({
   children,
   className = '',
-  asChild = false,
+  // asChild = false,
   ...props
 }) => {
   const baseClasses = clsx(
@@ -29,13 +29,13 @@ export const Button: FC<ButtonProps> = ({
   )
 
   // If using asChild, children must be a valid React element
-  if (asChild && React.isValidElement(children)) {
-    const childElement = children as ReactElement<any, any>
-    return React.cloneElement(childElement, {
-      className: clsx(baseClasses, childElement.props.className),
-      ...props,
-    })
-  }
+  // if (asChild && React.isValidElement(children)) {
+  //   const childElement = children as ReactElement<any, any>
+  //   return React.cloneElement(childElement, {
+  //     className: clsx(baseClasses, childElement.props.className),
+  //     ...props,
+  //   })
+  // }
 
   return (
     <button className={baseClasses} {...props}>

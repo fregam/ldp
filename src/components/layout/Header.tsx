@@ -4,7 +4,7 @@ import { useState, useEffect, JSX } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import clsx from 'clsx'
 import { usePathname } from 'next/navigation'
 import MobileMenu from './MobileMenu'
@@ -16,12 +16,11 @@ interface NavItem {
 
 const NAV_ITEMS: NavItem[] = [
   { label: 'Inicio', href: '/' },
-  { label: 'Sobre mí', href: '#sobre-mi' },
   { label: 'Consulta', href: '/Consulta' },
   { label: 'Talleres', href: '/Talleres' },
   { label: 'Podcast', href: '/Podcast' },
-  { label: 'Club de Lectura', href: '/Club-de-lectura' },
-  { label: 'Contacto', href: '/Contacto' },
+  { label: 'Club de Lectura', href: '/ClubLectura' },
+  // { label: 'Contacto', href: '/Contacto' },
 ]
 
 export default function Header(): JSX.Element {
