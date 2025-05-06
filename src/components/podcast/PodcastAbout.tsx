@@ -45,7 +45,7 @@ export default function PodcastAbout(): JSX.Element {
                 El podcast está disponible de forma gratuita en múltiples plataformas digitales, incluyendo Apple Podcasts, Google Podcasts, Spotify y en versión de video en YouTube.
               `}
               bgClass="bg-[var(--color-cream)]"
-              textClass="text-[var(--color-foreground)]"
+              textClass="text-[var(--color-black)]"
               icon={<Headphones className="h-6 w-6 text-[var(--color-sage-600)]" />}
               button={{
                 label: "Escuchar episodios",
@@ -60,21 +60,21 @@ export default function PodcastAbout(): JSX.Element {
               title="60+"
               description="Episodios publicados explorando diversos temas de salud mental y bienestar emocional."
               bgClass="bg-[var(--color-beige-300)]"
-              textClass="text-[var(--color-charcoal)]"
+              textClass="text-[var(--color-black)]"
               icon={<Mic className="h-6 w-6 text-[var(--color-sage-600)]" />}
             />
             <Card
               title="80,000+"
               description="Reproducciones en audio a través de diversas plataformas de podcast."
               bgClass="bg-[var(--color-beige-300)]"
-              textClass="text-[var(--color-charcoal)]"
+              textClass="text-[var(--color-black)]"
               icon={<Headphones className="h-6 w-6 text-[var(--color-sage-600)]" />}
             />
             <Card
               title="60,000+"
               description="Visualizaciones en video, creando una comunidad comprometida con la salud mental."
               bgClass="bg-[var(--color-beige-300)]"
-              textClass="text-[var(--color-charcoal)]"
+              textClass="text-[var(--color-black)]"
               icon={<Users className="h-6 w-6 text-[var(--color-sage-600)]" />}
             />
           </div>
