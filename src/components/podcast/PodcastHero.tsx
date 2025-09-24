@@ -79,25 +79,9 @@ export default function PodcastHero(): JSX.Element {
               <p className="mt-6 text-lg text-[var(--color-muted-foreground)] sm:text-xl">
                 Un podcast que aborda la salud mental con autenticidad, empatía y rigor científico.
               </p>
-
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
-                <Button className="w-full sm:w-auto">
-                  <Link href="/Contacto" className="flex items-center gap-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5"
-                    >
-                      <path d="M18 8L22 12L18 16" />
-                      <path d="M2 12H22" />
-                    </svg>
-                    Escuchar ahora
-                  </Link>
+                <Button className="w-full sm:w-auto" >
+                  <Link href="youtube.com">Escuchar ahora</Link>
                 </Button>
 
                 <Link

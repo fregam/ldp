@@ -92,11 +92,11 @@ export default function TalleresCards() {
         },
     ]
     const workshopImages = [
-        '/images/PHOTO-2025-04-05-10-16-13.jpg ',
-        '/images/PHOTO-2025-04-05-10-16-15.jpg ',
-        '/images/PHOTO-2025-04-05-10-16-22.jpg ',
-        '/images/PHOTO-2025-04-05-10-16-35.jpg ',
-        '/images/PHOTO-2025-04-05-10-16-38.jpg ',
+        '/images/PHOTO-2025-04-05-10-16-13.jpg',
+        '/images/PHOTO-2025-04-05-10-16-15.jpg',
+        '/images/PHOTO-2025-04-05-10-16-22.jpg',
+        '/images/PHOTO-2025-04-05-10-16-35.jpg',
+        '/images/PHOTO-2025-04-05-10-16-38.jpg',
         '/images/PHOTO-2025-04-05-10-16-50.jpg',
     ]
 
@@ -149,15 +149,21 @@ export default function TalleresCards() {
                                                 <h3 className="text-xl font-semibold text-[var(--color-foreground)] mb-4">
                                                     {services[currentIndex].title}
                                                 </h3>
-                                                <p className="font-semibold text-[var(--color-foreground)]">
-
+                                                <p className="text-[var(--color-foreground)] text-lg">
+                                                    {services[currentIndex].description}
                                                 </p>
+                                                <div className="py-md flex flex-wrap gap-sm">
+                                                    {services[currentIndex].features.map((feature) =>
+                                                        <span
+                                                            key={feature}
+                                                            className="whitespace-nowrap rounded-full bg-[var(--color-beige-300)] px-sm"
+                                                        >
+                                                            {feature}
+                                                        </span>
+                                                    )}
+                                                </div>
                                             </div>
                                         </div>
-                                        <p className="text-[var(--color-foreground)] text-lg">
-                                            {services[currentIndex].description}
-                                        </p>
-
                                     </motion.div>
                                 </AnimatePresence>
                             </div>

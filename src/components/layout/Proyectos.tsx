@@ -38,7 +38,7 @@ export function Proyectos() {
                         <Card
                             bgClass="bg-[var(--color-muted)]"
                             textClass="text-[var(--color-black)]"
-                            icon={<Podcast className="w-6 h-6" />}
+                            icon={<Podcast className="w-6 h-6 text-[var(--color-sage-600)]" />}
                             title="Podcast Semanal"
                             description="Episodios con expertos en salud mental cada semana."
                             button={{ label: 'Escuchar', href: '/podcast' }}
@@ -56,9 +56,9 @@ export function Proyectos() {
                         {/* YouTube Stats Card */}
                         <div >
                             <Card
-                                bgClass="bg-[var(--color-primary)] "
+                                bgClass="bg-[var(--color-sage-400)] "
                                 textClass="text-[var(--color-black)]"
-                                icon={<Youtube className="w-6 h-6" />}
+                                icon={<Youtube className="w-6 h-6 text-[var(--color-primary)]" />}
                                 title="80,000+ Reproducciones"
                                 description="Miles de reproducciones en Spotify y YouTube."
                                 button={{ label: 'Ver Más', href: '/reproducciones' }}
@@ -70,7 +70,7 @@ export function Proyectos() {
                             <Card
                                 bgClass="bg-[var(--color-secondary)]"
                                 textClass="text-[var(--color-black)]"
-                                icon={<BookOpen className="w-6 h-6" />}
+                                icon={<BookOpen className="w-6 h-6 text-[var(--color-primary)]" />}
                                 title="Club de Lectura"
                                 description="Creciendo Juntos, reflexiones sobre crecimiento personal."
                                 button={{ label: 'Únete', href: '/club-de-lectura' }}

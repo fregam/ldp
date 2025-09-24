@@ -16,15 +16,15 @@ export const Button: FC<ButtonProps> = ({
   ...props
 }) => {
   const baseClasses = clsx(
-    'inline-block',
     'bg-[var(--color-primary)]',
     'text-[var(--color-primary-foreground)]',
     'font-semibold',
-    'py-3 px-6',
+    'py-sm px-md',
     'rounded-full',
     'shadow-lg',
     'hover:bg-[var(--color-secondary)]',
-    'transition-colors',
+    'hover:text-[var(--color-secondary-foreground)]',
+    'transition-all',
     className
   )
 
