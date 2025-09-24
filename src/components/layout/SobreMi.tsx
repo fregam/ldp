@@ -4,7 +4,7 @@ import { Section } from '../ui/Section'
 
 export function SobreMi() {
   return (
-    <Section decorate className="py-20 sm:py-24 lg:py-32" id="sobre-mi">
+    <Section decorate className="scroll-mt-24 lg:scroll-mt-32 py-20 sm:py-24 lg:py-32" id="sobre-mi">
       <Container animate className="relative mx-auto" motionProps={{
         initial: { opacity: 0, y: 20 },
         whileInView: { opacity: 1, y: 0 },

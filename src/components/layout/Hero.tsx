@@ -1,11 +1,12 @@
 'use client'
 
-import { JSX } from 'react'
+import { JSX, useState } from 'react'
 import Link from 'next/link'
 import { Container } from '@/components/ui/Container'
 import { Section } from '../ui/Section'
 
 export default function Hero(): JSX.Element {
+  const [status, setStatus] = useState<'idle' | 'ok' | 'error'>('idle')
   return (
     <Section decorate>
       <Container
@@ -27,7 +28,7 @@ export default function Hero(): JSX.Element {
         </div>
 
         {/* Text Content */}
-        <div className="lg:col-span-3 py-12 sm:py-48 lg:py-56 px-4 sm:px-0">
+        <div className="lg:col-span-3 py-6 sm:py-48 lg:py-56 px-4 sm:px-0">
           {/* Announcement Banner */}
           <div className="hidden sm:mb-8 sm:flex">
             <div className="relative rounded-full px-3 py-1 text-sm text-[var(--color-foreground)] ring-1 ring-[var(--color-border)] hover:ring-[var(--color-foreground)]">
@@ -52,11 +53,39 @@ export default function Hero(): JSX.Element {
             <p className="mt-8 text-lg text-[var(--color-muted-foreground)] sm:text-xl">
               Sesiones de terapia individual, talleres y recursos diseñados para fortalecer tu mente, cultivar resiliencia y mejorar tu calidad de vida.
             </p>
-            <div className="mt-10 flex items-center justify-center lg:justify-start gap-x-6">
-              <Link href="#sobre-mi" className="text-lg font-semibold text-[var(--color-foreground)]">
-                Conóceme <span >→</span>
-              </Link>
-            </div>
+            <form className="mt-6 flex flex-col sm:flex-row items-stretch gap-3">
+              {/* Honeypot anti-spam */}
+              <input
+                type="text"
+                name="_gotcha"
+                className="hidden"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+
+              <label htmlFor="email" className="sr-only">Correo electrónico</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                required
+                placeholder="tu@email.com"
+                className="flex-grow sm:max-w-md rounded-md border border-[var(--color-border)] bg-transparent px-4 py-3 outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+              />
+
+              <button
+                type="submit"
+                className="inline-flex items-center justify-center rounded-md px-5 py-3 font-semibold border border-[var(--color-foreground)] hover:bg-[var(--color-foreground)] hover:text-[var(--color-background)] transition"
+              >
+                Unirme
+              </button>
+            </form>
+
+            {status === 'ok' && (
+              <p className="mt-3 text-sm text-[var(--color-muted-foreground)]">
+                ¡Gracias! Revisa tu correo para confirmar la suscripción.
+              </p>
+            )}
           </div>
         </div>
 
@@ -73,6 +102,7 @@ export default function Hero(): JSX.Element {
             />
           </div>
         </div>
+
       </Container>
     </Section>
   )

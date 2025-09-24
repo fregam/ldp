@@ -41,7 +41,7 @@ export default function BookClubBooks(): JSX.Element {
         </div>
 
         <div className="lg:col-span-5">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-sm">
+          {/* <div className="grid grid-cols-2 md:grid-cols-5 gap-sm">
             {[...Array(5)].map((_, i) => (
               <motion.div
                 key={i}
@@ -60,7 +60,7 @@ export default function BookClubBooks(): JSX.Element {
                 />
               </motion.div>
             ))}
-          </div>
+          </div> */}
 
           <div className="mt-12 bg-[var(--color-cream)] rounded-sm p-6 md:p-8 shadow-md">
             <h3 className="text-xl font-semibold text-[var(--color-foreground)] mb-4">

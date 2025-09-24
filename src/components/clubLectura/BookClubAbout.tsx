@@ -64,7 +64,7 @@ export default function BookClubAbout(): JSX.Element {
             </motion.div>
 
             <motion.div 
-              className="bg-[var(--color-background)] rounded-sm shadow-md "
+              className="bg-[var(--color-background)] rounded-sm "
               whileHover={{ y: -5 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
