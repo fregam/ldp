@@ -28,7 +28,7 @@ export function Experiencia() {
                         autoconocimiento y crecimiento personal.
                     </p>
                     <blockquote className="w-full my-16 p-4 border-l-4 … max-w-3xl">
-                    {`&quot`} Cada experiencia clínica y formativa ha reforzado mi vocación por el bienestar emocional.{`&quot`}
+                    &quot; Cada experiencia clínica y formativa ha reforzado mi vocación por el bienestar emocional.&quot;
                     </blockquote>
                 </div>
 
