@@ -4,7 +4,7 @@ import type { JSX } from "react"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { motion } from "framer-motion"
-import Image from "next/image"
+// import Image from "next/image"
 
 const books = [
   "En Auschwitz no había Prozac (The Gift) – Edith Eger",

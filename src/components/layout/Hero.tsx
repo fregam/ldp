@@ -6,7 +6,7 @@ import { Container } from '@/components/ui/Container'
 import { Section } from '../ui/Section'
 
 export default function Hero(): JSX.Element {
-  const [status, setStatus] = useState<'idle' | 'ok' | 'error'>('idle')
+  // const [status, setStatus] = useState<'idle' | 'ok' | 'error'>('idle')
   return (
     <Section decorate>
       <Container
@@ -81,11 +81,11 @@ export default function Hero(): JSX.Element {
               </button>
             </form>
 
-            {status === 'ok' && (
+            {/* {status === 'ok' && (
               <p className="mt-3 text-sm text-[var(--color-muted-foreground)]">
                 ¡Gracias! Revisa tu correo para confirmar la suscripción.
               </p>
-            )}
+            )} */}
           </div>
         </div>
 
